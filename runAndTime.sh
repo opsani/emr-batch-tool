@@ -56,7 +56,7 @@ if [[ "$CLUSTER_CURRENT_STATUS" == "STARTING" ]]; then
     while true; do
         CLUSTER_CURRENT_STATUS=$(aws emr describe-cluster --cluster-id ${WORKING_CLUSTER_ID} --region ${EMR_BATCH_REGION} | jq -r --arg WORKING_CLUSTER_ID "$WORKING_CLUSTER_ID" '.[] | select(.Id==$WORKING_CLUSTER_ID).Status.State')
         [[ "$CLUSTER_CURRENT_STATUS" == "STARTING" ]] || break
-        # Pull the status every two seconds.
+        # Poll the status every two seconds.
         sleep 2
     done
     kill -9 $SPIN_PID
@@ -84,7 +84,6 @@ if [[ "$CLUSTER_CURRENT_STATUS" == "RUNNING" ]]; then
         # Pull the status every two seconds.
         sleep 2
     done
-    kill -9 $SPIN_PID
 fi
 
 # Tear Down the Cluster

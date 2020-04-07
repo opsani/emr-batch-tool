@@ -5,14 +5,13 @@ This tool exists to allow you to run an arbitrary Python Jupyter notebook on Ama
 ## EMR Cluster Statuses
 
 These are the statuses currently in use. **BOLD** statuses are the statuses that we are looking at in the script.
-
-**STARTING – In this state, cluster provisions, starts, and configures EC2 instances**
-BOOTSTRAPPING – In this state cluster is executing the Bootstrap process
-**RUNNING – State in which cluster is currently being run**
-WAITING – In this state cluster is currently active, but there are no steps to run
-**TERMINATING - Shut down of cluster has started**
-TERMINATED - The cluster is shut down without any error
-TERMINATED_WITH_ERRORS - The cluster is shut down with errors.
+* **STARTING – In this state, cluster provisions, starts, and configures EC2 instances**
+* BOOTSTRAPPING – In this state cluster is executing the Bootstrap process
+* **RUNNING – State in which cluster is currently being run**
+* WAITING – In this state cluster is currently active, but there are no steps to run
+* **TERMINATING - Shut down of cluster has started**
+* TERMINATED - The cluster is shut down without any error
+* TERMINATED_WITH_ERRORS - The cluster is shut down with errors.
 
 We look at the time it takes to *start* the cluster. Then we measure how long it takes the cluster to *run* a job. Then we measure how long it takes to *terminate* a job. We don't anticipate our cluster to ever sit in the waiting stage. If a cluster is not actively running, we terminate it.
 
