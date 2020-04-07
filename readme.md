@@ -1,6 +1,8 @@
 # The EMR Batch Timing Tool
 
-This tool exists to allow you to run an arbitrary Python Jupyter notebook on Amazon Elastic Map Reduce (EMR) from the command line. (COMING SOON!) Additional modification to the script should allow us to be able to run it with a variety of instance groups and to time the results. This script times work done over a variety of EMR cluster statuses.
+This tool exists to allow you to run an arbitrary Python Jupyter notebook on Amazon Elastic Map Reduce (EMR) from the command line.
+
+(COMING SOON!) Additional modification to the script should allow us to be able to run it with a variety of instance groups and to time the results. This script times work done over a variety of EMR cluster statuses.
 
 ## EMR Cluster Statuses
 
