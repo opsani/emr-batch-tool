@@ -1,4 +1,4 @@
-# Opsani AWS Elastic MapReduce Batch Job
+# Opsani AWS Elastic MapReduce Batch Tool
 
 ## System Overview
 Opsani helps you get your work done, better. You have plenty of work to do on remote compute clusters. As a developer, there are a myriad of settings to tinker with that might help you in your quest to optimize the work you are doing. Unfortunately, the sheer number of options makes manual optimization an intractable problem if you want to do anything else productive with your time. Even with a relatively small problem space, knowing how many nodes to use in a cluster, or what the size of those nodes needs to be in order to achieve high performance at the right price can be a full-time job. Worse yet, the "ideal" setting can change depending on the way your write your programs and the type of data you are processing.
