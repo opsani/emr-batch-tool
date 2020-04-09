@@ -38,7 +38,7 @@ During the Launch and Run phase, the script will create a cluster and run your n
 
 When the Jupyter notebooks have completed their run, the script will tear down the cluster and reset the environment so that we can perform another run wth different settings. You will want to try to reset the data to its original state. This allows us to use the data as a control variable. At the end of this step, we need to be prepared to run things again with the same data, but different settings. 
 
-## How We Will Use This
+## What We Do With The Output
 
 After you complete this script, Opsani engineers will help you embed it in an Opsani-provided Servo. That Servo will feed information back into Opsani's Continuous Optimization Engine (OCO). The OCO will will then provide you with more ideal settings to run your jobs.
 
