@@ -1,5 +1,6 @@
 ###############################################
 # EMR Batch Tool by Opsani
+# © 2020 Opsani
 #
 # This script is meant to be a frame
 # from which you can prepare your own
