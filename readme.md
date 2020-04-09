@@ -49,3 +49,6 @@ Note: If the nature of the data changes we can and should run this process again
 Look through the script in this repository and modify it so that it can run inside of your own infrastructure. Make changes where appropriate to ensure that your data and notebooks are accessible to the script. This may require changing some of the settings in the script such as the AWS region, or where the script pulls data from. This script depends upon valid AWS credentials in your environment. If you can run this script inside of your environment, perhaps in an EC2 instance, then you should be good to go. At that point, we should be able to add it to a Servo that will help measure peformance and make adjustments. 
 
 Once you've completed this stage, please contact us and we can help you get going.
+
+----
+© 2020 Opsani
