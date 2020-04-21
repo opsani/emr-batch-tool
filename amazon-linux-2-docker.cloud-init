@@ -1,0 +1,16 @@
+#cloud-config
+
+repo_update: true
+repo_upgrade: all
+    
+packages:
+ - python3-devel
+
+run-cmd:
+ - [ sh, -c, "amazon-linux-extras install -y docker" ]
+ - systemctl start docker
+ - systemctl enable docker
+ - [ sh, -c, "usermod -a -G docker ec2-user" ]
+ - [ sh, -c, "curl -L https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose"]
+ - [ sh, -c, "chmod +x /usr/local/bin/docker-compose"]
+
