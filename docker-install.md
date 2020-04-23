@@ -89,18 +89,15 @@ EOF
 
 ### Get the Opsani Token and Other credentials
 
-Log in to your app in the console: https://console.opsani.com/accounts/komodohealth.com
+Log in to your app in the console: https://console.opsani.com/accounts/ACCOUNT_ID
 
-On the menu on the left side, you will see "Servo". Choose "Servo" under the application you are working with. You will see a "Servo Setup Instructions" page. Select "Download Servo Artifacts for [APPLICATION NAME]".
+On the menu on the left side, you will see "Servo". Choose "Servo" under the application you are working with. You will see a "Servo Setup Instructions" page. Select "Download Servo Artifacts for [APP_ID]".
 
-You will receive a compressed file. Decompress the file and open `install.sh` in your favorite text editor to get the values for ACCOUNT, APP_ID, and OPTUNE_AUTH_TOKEN.
+You will receive a compressed file. Decompress the file and open `install.sh` in your favorite text editor to get the values for ACCOUNT_ID, APP_ID, and OPSANI_AUTH_TOKEN.
 
-The OPTUNE_AUTH_TOKEN needs to be in a file titled `optune.token` in the working directory.
+The OPSANI_AUTH_TOKEN needs to be in a file titled `optune.token` in the working directory.
 
 ACCOUNT and APP_ID need to be placed in a file named `.env`, and named `ACCOUNT_ID` and `APP_ID` respectively.
-
-❗️❗️❗️Question for Robert. Should I not source the .env . . . and see below.
-For good measure `source .env`.
 
 ### Create the Docker Compose file
 
@@ -128,8 +125,6 @@ services:
     command: --account ${ACCOUNT_ID} ${APP_ID}
 EOF
 ```
-❗️❗️❗️ And should I be putting \{ \} in the command line above so the cat < ZZZ <<EOF thing doesn't mess with variable substitutions immediately?
-
 
 ### Create the barebones config.yaml file
 
